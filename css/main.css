@@ -25,7 +25,8 @@ body {
   font-weight: --font-weight-extrabold;
   color: white;
   display: grid;
-  place-content: center; }
+  place-content: center;
+  height: 100%; }
   body #container {
     margin: 100px auto;
     width: 350px;
@@ -52,9 +53,11 @@ body {
       margin: 2px;
       text-align: center;
       padding: 5px; }
-    body #container img {
+    body #container .mobileImg {
       position: absolute;
       top: 370px; }
+    body #container .desktopImg {
+      display: none; }
     body #container #generatorBtn {
       width: 60px;
       height: 60px;
@@ -72,7 +75,7 @@ body {
 
 @media (min-width: 1440px) {
   body #container {
-    margin: 100px auto;
+    margin: 150px auto;
     width: 600px;
     height: 350px;
     border-radius: 20px;
@@ -97,7 +100,10 @@ body {
       margin: 15px;
       text-align: center;
       padding: 5px; }
-    body #container img {
+    body #container .mobileImg {
+      display: none; }
+    body #container .desktopImg {
+      display: block;
       position: absolute;
       top: 370px; }
     body #container #generatorBtn {
