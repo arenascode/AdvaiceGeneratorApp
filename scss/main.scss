@@ -55,6 +55,10 @@ body {
       text-align: center;
       padding: 5px;
     }
+    img {
+      position: absolute;
+      top: 370px;
+    }
     #generatorBtn {
       width: 60px;
       height: 60px;
@@ -74,3 +78,58 @@ body {
     }
   }
 
+  @media (min-width: 1440px){
+    body {
+      #container {
+    margin: 100px auto;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    justify-content: flex-start;
+
+    #adviceNumber {
+      margin-top: 30px;
+      color: var(--primary-Neon-Green);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    #adviceContent {
+      max-height: 400px;
+      overflow: auto;
+      color:var(--primary-Light-Cyan);
+      font-weight: var(--font-weight-extrabold);
+      font-size: 28px;
+      margin: 15px;
+      text-align: center;
+      padding: 5px;
+    }
+    img {
+      position: absolute;
+      top: 370px;
+    }
+    #generatorBtn {
+      width: 60px;
+      height: 60px;
+      background-color: var(--primary-Neon-Green);
+      border-radius: 50%;
+      background-image: url('../images/icon-dice.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 410px;
+      margin-top: 13px;
+    }
+    #generatorBtn:hover {
+      box-shadow: 0 0 25px var(--primary-Neon-Green);
+      cursor: pointer;
+    }
+    }
+    }
+    
+  }
