@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border: none;
+  background: none; }
+
+:root {
+  --primary-Light-Cyan: hsl(193, 38%, 86%);
+  --primary-Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  --font-weight-extrabold: 800; }
+
+body {
+  background-color: var(--Dark-Blue);
+  font-family: 'Manrope', 'sans-serif';
+  font-weight: --font-weight-extrabold;
+  font-size: 28px;
+  color: white;
+  display: grid;
+  place-content: center; }
+  body #container {
+    margin: 100px auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 80px;
+    justify-content: flex-start; }
+    body #container #adviceId {
+      margin-top: 40px;
+      color: var(--primary-Neon-Green);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px; }
+    body #container #adviceContent {
+      color: var(--primary-Light-Cyan);
+      font-weight: var(--font-weight-extrabold); }
+    body #container #generatorBtn {
+      width: 60px;
+      height: 60px;
+      background-color: var(--primary-Neon-Green);
+      border-radius: 50%;
+      background-image: url("../images/icon-dice.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 420px; }
