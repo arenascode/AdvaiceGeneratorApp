@@ -6,7 +6,6 @@ const adviceContent = document.getElementById('adviceContent')
 
 async function generateAdvice() {
   try {
-
   const response = await fetch('https://api.adviceslip.com/advice')
 
   if (!response.ok) {
