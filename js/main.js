@@ -22,3 +22,5 @@ async function generateAdvice() {
   console.error(`Error:`, error)
   }
 }
+
+//window.onload(generateAdvice())

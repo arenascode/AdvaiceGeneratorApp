@@ -38,16 +38,18 @@ body {
     row-gap: 40px;
     justify-content: flex-start; }
     body #container #adviceNumber {
-      margin-top: 40px;
+      margin-top: 20px;
       color: var(--primary-Neon-Green);
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 1.5px; }
     body #container #adviceContent {
+      max-height: 400px;
+      overflow: auto;
       color: var(--primary-Light-Cyan);
       font-weight: var(--font-weight-extrabold);
       font-size: 28px;
-      margin: 8px;
+      margin: 2px;
       text-align: center;
       padding: 5px; }
     body #container #generatorBtn {
