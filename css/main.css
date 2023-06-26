@@ -21,7 +21,7 @@ button {
 
 body {
   background-color: var(--Dark-Blue);
-  font-family: 'Manrope', 'sans-serif';
+  font-family: "Manrope", "sans-serif";
   font-weight: --font-weight-extrabold;
   color: white;
   display: grid;
@@ -29,7 +29,7 @@ body {
   min-height: 100vh; }
   body #container {
     width: 350px;
-    height: 350px;
+    height: max-content;
     border-radius: 20px;
     background-color: var(--Dark-Grayish-Blue);
     display: flex;
@@ -44,20 +44,21 @@ body {
       font-weight: 700;
       letter-spacing: 1.5px; }
     body #container #adviceContent {
-      max-height: 400px;
-      overflow: auto;
+      min-height: max-content;
       color: var(--primary-Light-Cyan);
       font-weight: var(--font-weight-extrabold);
       font-size: 28px;
       margin: 2px;
       text-align: center;
-      padding: 5px; }
-    body #container .mobileImg {
-      position: absolute;
-      top: 370px; }
-    body #container .desktopImg {
-      display: none; }
-    body #container #generatorBtn {
+      padding: 2px; }
+    body #container #imgDivider {
+      display: flex;
+      align-content: center; }
+      body #container #imgDivider .mobileImg {
+        top: 370px; }
+      body #container #imgDivider .desktopImg {
+        display: none; }
+    body #container #btnContainer #generatorBtn {
       width: 60px;
       height: 60px;
       background-color: var(--primary-Neon-Green);
@@ -65,10 +66,8 @@ body {
       background-image: url("../images/icon-dice.svg");
       background-position: center;
       background-repeat: no-repeat;
-      position: absolute;
-      top: 420px;
-      margin-top: 13px; }
-    body #container #generatorBtn:hover {
+      margin-top: 5px; }
+    body #container #btnContainer #generatorBtn:hover {
       box-shadow: 0 0 25px var(--primary-Neon-Green);
       cursor: pointer; }
 
@@ -76,7 +75,7 @@ body {
   body #container {
     margin: 150px auto;
     width: 600px;
-    height: 350px;
+    height: max-content;
     border-radius: 20px;
     background-color: var(--Dark-Grayish-Blue);
     display: flex;
@@ -91,21 +90,21 @@ body {
       font-weight: 700;
       letter-spacing: 1.5px; }
     body #container #adviceContent {
-      max-height: 400px;
-      overflow: auto;
+      max-height: max-content;
       color: var(--primary-Light-Cyan);
       font-weight: var(--font-weight-extrabold);
       font-size: 28px;
       margin: 15px;
       text-align: center;
       padding: 5px; }
-    body #container .mobileImg {
-      display: none; }
-    body #container .desktopImg {
-      display: block;
-      position: absolute;
-      top: 400px; }
-    body #container #generatorBtn {
+    body #container #imgDivider {
+      display: flex;
+      align-content: center; }
+      body #container #imgDivider .mobileImg {
+        display: none; }
+      body #container #imgDivider .desktopImg {
+        display: block; }
+    body #container #btnContainer #generatorBtn {
       width: 60px;
       height: 60px;
       background-color: var(--primary-Neon-Green);
@@ -113,9 +112,7 @@ body {
       background-image: url("../images/icon-dice.svg");
       background-position: center;
       background-repeat: no-repeat;
-      position: absolute;
-      top: 460px;
-      margin-top: 13px; }
-    body #container #generatorBtn:hover {
+      margin-top: 5px; }
+    body #container #btnContainer #generatorBtn:hover {
       box-shadow: 0 0 25px var(--primary-Neon-Green);
       cursor: pointer; } }

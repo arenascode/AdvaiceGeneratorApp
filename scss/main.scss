@@ -1,26 +1,25 @@
-// font 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap');
-;
-@import './reset';
-// Variables 
+// font
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap");
+@import "./reset";
+// Variables
 
-//Colors 
+//Colors
 :root {
   // Primary
   --primary-Light-Cyan: hsl(193, 38%, 86%);
   --primary-Neon-Green: hsl(150, 100%, 66%);
-  // Neutral 
+  // Neutral
   --Grayish-Blue: hsl(217, 19%, 38%);
   --Dark-Grayish-Blue: hsl(217, 19%, 24%);
   --Dark-Blue: hsl(218, 23%, 16%);
 
-  //Fonts 
-  --font-weight-extrabold : 800;
+  //Fonts
+  --font-weight-extrabold: 800;
 }
 
 body {
   background-color: var(--Dark-Blue);
-  font-family: 'Manrope', 'sans-serif';
+  font-family: "Manrope", "sans-serif";
   font-weight: --font-weight-extrabold;
   color: white;
   display: grid;
@@ -29,7 +28,7 @@ body {
 
   #container {
     width: 350px;
-    height: 350px;
+    height: max-content;
     border-radius: 20px;
     background-color: var(--Dark-Grayish-Blue);
     display: flex;
@@ -46,97 +45,101 @@ body {
       letter-spacing: 1.5px;
     }
     #adviceContent {
-      max-height: 400px;
-      overflow: auto;
-      color:var(--primary-Light-Cyan);
+      min-height: max-content;
+      color: var(--primary-Light-Cyan);
       font-weight: var(--font-weight-extrabold);
       font-size: 28px;
       margin: 2px;
       text-align: center;
-      padding: 5px;
+      padding: 2px;
     }
-    .mobileImg {
-      position: absolute;
-      top: 370px;
+    #imgDivider {
+      display: flex;
+      align-content: center;
+      .mobileImg {
+        // position: absolute;
+        top: 370px;
+      }
+      .desktopImg {
+        display: none;
+      }
     }
-    .desktopImg {
-      display: none;
-    }
-    #generatorBtn {
-      width: 60px;
-      height: 60px;
-      background-color: var(--primary-Neon-Green);
-      border-radius: 50%;
-      background-image: url('../images/icon-dice.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 420px;
-      margin-top: 13px;
-    }
-    #generatorBtn:hover {
-      box-shadow: 0 0 25px var(--primary-Neon-Green);
-      cursor: pointer;
-    }
+    #btnContainer {
+      #generatorBtn {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-Neon-Green);
+        border-radius: 50%;
+        background-image: url("../images/icon-dice.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+      }
+      #generatorBtn:hover {
+        box-shadow: 0 0 25px var(--primary-Neon-Green);
+        cursor: pointer;
+      }
     }
   }
+}
 
-  @media (min-width: 1440px){
-    body {
-      #container {
-    margin: 150px auto;
-    width: 600px;
-    height: 350px;
-    border-radius: 20px;
-    background-color: var(--Dark-Grayish-Blue);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 50px;
-    justify-content: flex-start;
-
-    #adviceNumber {
-      margin-top: 30px;
-      color: var(--primary-Neon-Green);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+@media (min-width: 1440px) {
+  body {
+    #container {
+      margin: 150px auto;
+      width: 600px;
+      height: max-content;
+      border-radius: 20px;
+      background-color: var(--Dark-Grayish-Blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 50px;
+      justify-content: flex-start;
+      #adviceNumber {
+        margin-top: 30px;
+        color: var(--primary-Neon-Green);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      #adviceContent {
+        max-height: max-content;
+        // overflow: auto;
+        color: var(--primary-Light-Cyan);
+        font-weight: var(--font-weight-extrabold);
+        font-size: 28px;
+        margin: 15px;
+        text-align: center;
+        padding: 5px;
+      }
+      #imgDivider {
+      display: flex;
+      align-content: center;
+      .mobileImg {
+        display: none;
+      }
+      .desktopImg {
+        display: block;
+      }
+      }
+      #btnContainer {
+        #generatorBtn {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-Neon-Green);
+        border-radius: 50%;
+        background-image: url("../images/icon-dice.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+      }
+      #generatorBtn:hover {
+        box-shadow: 0 0 25px var(--primary-Neon-Green);
+        cursor: pointer;
+      }
+      }
+      
     }
-    #adviceContent {
-      max-height: 400px;
-      overflow: auto;
-      color:var(--primary-Light-Cyan);
-      font-weight: var(--font-weight-extrabold);
-      font-size: 28px;
-      margin: 15px;
-      text-align: center;
-      padding: 5px;
-    }
-    .mobileImg {
-      display: none;
-    }
-    .desktopImg {
-      display:block;
-      position: absolute;
-      top: 400px;
-    }
-    #generatorBtn {
-      width: 60px;
-      height: 60px;
-      background-color: var(--primary-Neon-Green);
-      border-radius: 50%;
-      background-image: url('../images/icon-dice.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 460px;
-      margin-top: 13px;
-    }
-    #generatorBtn:hover {
-      box-shadow: 0 0 25px var(--primary-Neon-Green);
-      cursor: pointer;
-    }
-    }
-    }
-    
   }
+}

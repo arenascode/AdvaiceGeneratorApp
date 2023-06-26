@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/main.css">
-  <title>Advice generator app</title>
-</head>
-<body onload="generateAdvice()">
-  <main id="container">
-    <section id="adviceNumber">
-      ADVICE # <span id="adviceId"></span>
-    </section>
-    <section id="adviceContent">
-    </section>
-    <img src="./images/pattern-divider-mobile.svg" alt="" class="mobileImg">
-    <img src="./images/pattern-divider-desktop.svg" alt="" class="desktopImg">
-    <button role="button" id="generatorBtn" onclick=generateAdvice()></button>
-  </main>
- <script src="./js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Advice generator app</title>
+  </head>
+  <body onload="generateAdvice()">
+    <main id="container">
+      <section id="adviceNumber">ADVICE # <span id="adviceId"></span></section>
+      <section id="adviceContent"></section>
+      <div id="imgDivider">
+        <img
+          src="./images/pattern-divider-mobile.svg"
+          alt=""
+          class="mobileImg"
+        />
+        <img
+          src="./images/pattern-divider-desktop.svg"
+          alt=""
+          class="desktopImg"
+        />
+      </div>
+      <div id="btnContainer">
+        <button
+        role="button"
+        id="generatorBtn"
+        onclick="generateAdvice()"
+      ></button>
+      </div>
+      
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
